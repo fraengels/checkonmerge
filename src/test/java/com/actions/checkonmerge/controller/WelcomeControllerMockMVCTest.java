@@ -23,11 +23,11 @@ class WelcomeControllerMockMVCTest {
   }
 
   @Test
-  void testHellowWhthoutName() throws Exception {
+  void testWelcomeWihtName() throws Exception {
     mvc.perform(MockMvcRequestBuilders.get("/welcome")
         .param("name", "Anton")
         .accept(MediaType.APPLICATION_JSON))
-        .andExpect(status().isOk());
+        .andExpect(status().isNotFound());
   }
 
 }
