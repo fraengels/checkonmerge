@@ -10,7 +10,6 @@ public class WelcomeController {
 
   @GetMapping("/welcome")
   public Greeting welcome(@RequestParam String name) {
-    Greeting greeting = new Greeting(name, "Welcome to this service!");
-    return greeting;
+    return new Greeting(name, "Welcome to this service!");
   }
 }
