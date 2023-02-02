@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: check-depl
+spec:
+  selector:
+    matchLabels:
+      app: check-depl
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: check-depl
+    spec:
+      containers:
+        - name: check
+          image: check:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
