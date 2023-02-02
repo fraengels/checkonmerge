@@ -27,7 +27,7 @@ class WelcomeControllerMockMVCTest {
     mvc.perform(MockMvcRequestBuilders.get("/welcome")
         .param("name", "Anton")
         .accept(MediaType.APPLICATION_JSON))
-        .andExpect(status().isOk());
+        .andExpect(status().isNotFound());
   }
 
 }
