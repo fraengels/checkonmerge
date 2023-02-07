@@ -8,9 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WelcomeController {
 
+  @GetMapping
+  public String index() {
+    return "Congratulations! Your application is running!";
+  }
+
   @GetMapping("/welcome")
   public Greeting welcome(@RequestParam String name) {
-    Greeting greeting = new Greeting(name, "Welcome to this service!");
-    return greeting;
+    return new Greeting(name, "Welcome to this service!");
   }
 }

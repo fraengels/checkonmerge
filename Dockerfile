@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM openjdk:11-jdk-stretch
 ARG APPLICATION_NAME="checkonmerge"
 
 EXPOSE 8080
